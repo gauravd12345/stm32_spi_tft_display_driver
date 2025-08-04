@@ -18,7 +18,7 @@ struct rcc {
 
 
 struct spi {
-    volatile uint32_t SPI_CR1, SPI_CR2, SPI_DR, SPI_CRCPR, 
+    volatile uint32_t SPI_CR1, SPI_CR2, SPI_SR, SPI_DR, SPI_CRCPR, 
                       SPI_RXCRCR, SPI_TXCRCR, SPI_I2SCFGR, SPI_I2SPR;
     
 };
