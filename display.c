@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "hal.h"
 
-#define GPIO(port) ((struct gpio *) 0x40020000 + (0x400 * (port - 'A')))
+#define GPIO(port) ((struct gpio *) 0x40020000 + (0x04 * (port - 'A')))
 #define RCC ((struct rcc *) 0x40023800)
 #define SPI ((struct spi *) 0x40013000)
 
@@ -24,9 +24,10 @@
 #define DATA 1
 
 void gpio_init(void){
-    // Enabling the GPIOA, GPIOB and SPI1 clock 
+    // Enabling the SPI1, GPIOB, and GPIOA clock 
     RCC->AHB1ENR |= (1 << 0);
     RCC->AHB1ENR |= (1 << 1);
+    RCC->APB2ENR |= (1 << 12);
 
     // Clearing and setting the GPIOA_MODER register to AF mode
     GPIO('A')->MODER &= ~(0b11U << (PA8 * 2));
@@ -41,14 +42,14 @@ void gpio_init(void){
     GPIO('B')->MODER |= (GPIO_MODE_OUTPUT << (PB5 * 2));
     GPIO('A')->MODER |= (GPIO_MODE_OUTPUT << (PA10 * 2));
 
-    GPIO('A')->MODER |= (0b11U << (PA5 * 2));
+    GPIO('A')->MODER |= (GPIO_MODE_AF << (PA5 * 2));
     GPIO('A')->MODER |= (GPIO_MODE_AF << (PA6 * 2));
     GPIO('A')->MODER |= (GPIO_MODE_AF << (PA7 * 2));
 
     // Clearing and setting GPIOA_AFLR register to AF5(SPI1 function)
-    GPIO('A')->AFR[0] &= ~(0xFU << (PA5 * 4));
-    GPIO('A')->AFR[0] &= ~(0xFU << (PA6 * 4));
-    GPIO('A')->AFR[0] &= ~(0xFU << (PA7 * 4));
+    GPIO('A')->AFR[0] &= ~(0b1111U << (PA5 * 4));
+    GPIO('A')->AFR[0] &= ~(0b1111U << (PA6 * 4));
+    GPIO('A')->AFR[0] &= ~(0b1111U << (PA7 * 4));
 
     GPIO('A')->AFR[0] |= (0x5U << (PA5 * 4));
     GPIO('A')->AFR[0] |= (0x5U << (PA6 * 4));
@@ -56,20 +57,9 @@ void gpio_init(void){
 
 }
 
-void spi_disable(void){
-    // Bit 7 is BSY bit and Bit 1 is TXE bit
-    while(!((SPI->SPI_SR & (1 << 1)) & (SPI->SPI_SR & (1 << 7)))){
-
-    }
-    SPI->SPI_CR1 |= (0 << 6); // Setting SPE bit to 0, resetting SPI communcation
-
-}
 
 void spi_config(void){ 
-    // SPI1 Clock
-    RCC->APB2ENR |= (1 << 12);
-
-    SPI->SPI_CR1 &= ~(1U << 6); // Setting SPE bit to 1, enabling SPI communcation
+    SPI->SPI_CR1 &= ~(1U << 6); // Setting SPE bit to 0, disabling SPI communcation
 
     SPI->SPI_CR1 &= ~(0b111U << 3);   
     SPI->SPI_CR1 |= (0b011U << 3); // Setting baud rate control to f_pclk / 4
@@ -89,6 +79,7 @@ void spi_config(void){
 
     SPI->SPI_CR1 |= (1 << 6); // Setting SPE bit to 1, enabling SPI communcation
 }
+
 
 void spi_display_write(uint8_t buf, unsigned int d_c){
     while(!(SPI->SPI_SR & (1U << 1))){ // wait for transmit buffer to be empty
@@ -113,11 +104,7 @@ uint32_t spi_read(void){
     return SPI->SPI_DR;
 }
 
-/*
-Initializing the display using the SPI protocol:
-    MCU has to enable the display module by toggling its CS(Chip Select)line low. This way, if other peripherals are connected, 
-    to the SPI bus, the display can still be uniquely identified and enabled. 
-*/
+
 void display_write_config(void){
     // Setting RGB format to RGB666
     spi_display_write(INTERFACE_PIXEL_FORMAT, COMMAND); 
@@ -138,15 +125,9 @@ void display_write_config(void){
 int main(void){
     gpio_init();
     spi_config();
-    // display_write_config();
-    // RCC->AHB1ENR |= (1 << 0);
-    // GPIO('A')->MODER &= ~(0b11U << (PA5 * 2));
-    // GPIO('A')->MODER |= (GPIO_MODE_AF << (PA5 * 2));
-    // GPIO('A')->AFR[0] &= ~(0b1111U << (PA5 * 4));
-    // GPIO('A')->AFR[0] |= (0b0101U << (PA5 * 4));
-
+    
     while(1){
-        ;
+        display_write_config();
     }
 
 }

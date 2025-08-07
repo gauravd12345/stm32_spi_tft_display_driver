@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "hal.h"
 
-#define GPIO(port) ((struct gpio *) 0x40020000 + (0x400 * (port - 'A')))
+#define GPIO(port) ((struct gpio *) 0x40020000 + (0x04 * (port - 'A')))
 #define RCC ((struct rcc *) 0x40023800)
 #define SPI ((struct spi *) 0x40013000)
 
@@ -9,17 +9,28 @@
 #define PA6 6 // SPI1_MISO
 #define PA7 7 // SPI1_MOSI
 
+#define PA10 10 // Pin D2 on MCU -> CS line
+#define PB5 5 // Pin D4 on MCU -> RESET line
+#define PA8 8 // Pin D7 on MCU -> DC/RS line
 
 void gpio_init(void){
-    // Enabling the SPI1 clock 
+    // Enabling the SPI1, GPIOB, and GPIOA clock 
     RCC->AHB1ENR |= (1 << 0);
-    //RCC->AHB1ENR |= (1 << 1);
+    RCC->AHB1ENR |= (1 << 1);
     RCC->APB2ENR |= (1 << 12);
 
     // Clearing and setting the GPIOA_MODER register to AF mode
+    GPIO('A')->MODER &= ~(0b11U << (PA8 * 2));
+    GPIO('B')->MODER &= ~(0b11U << (PB5 * 2));
+    GPIO('A')->MODER &= ~(0b11U << (PA10 * 2));
+
     GPIO('A')->MODER &= ~(0b11U << (PA5 * 2));
     GPIO('A')->MODER &= ~(0b11U << (PA6 * 2));
     GPIO('A')->MODER &= ~(0b11U << (PA7 * 2));
+
+    GPIO('A')->MODER |= (GPIO_MODE_OUTPUT << (PA8 * 2));
+    GPIO('B')->MODER |= (GPIO_MODE_OUTPUT << (PB5 * 2));
+    GPIO('A')->MODER |= (GPIO_MODE_OUTPUT << (PA10 * 2));
 
     GPIO('A')->MODER |= (GPIO_MODE_AF << (PA5 * 2));
     GPIO('A')->MODER |= (GPIO_MODE_AF << (PA6 * 2));
@@ -57,7 +68,6 @@ void spi_config(void){
     SPI->SPI_CR1 &= ~(1U << 11); // DFF bit: 8-bit data frame format is selected for transmission/reception
 
     SPI->SPI_CR1 |= (1 << 6); // Setting SPE bit to 1, enabling SPI communcation
-
 }
 
 
@@ -81,9 +91,9 @@ uint32_t spi_read(void){
 int main(void){
     gpio_init();
     spi_config();
-
     while(1){
-        spi_display_write(0x3U);
+        spi_display_write(0x0U);
+
     }
 
 }
