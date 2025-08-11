@@ -1,57 +1,57 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                              C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o (memcpy)
+                              C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o (memcpy)
 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
-                              C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o (memset)
+                              C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o (memset)
 
 Discarded input sections
 
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .text          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .data          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .bss           0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .text          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .data          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .bss           0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
  .text.spi_read
-                0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
- .text          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
- .data          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
- .bss           0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
- .debug_macro   0x00000000      0xa6c C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+                0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .group         0x00000000        0xc C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
+ .text          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
+ .data          0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
+ .bss           0x00000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
+ .debug_macro   0x00000000      0xa6c C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
  .text          0x00000000        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
  .data          0x00000000        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
  .bss           0x00000000        0x0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
@@ -68,73 +68,76 @@ sram             0x20000000         0x00020000         xrw
 
 Linker script and memory map
 
-LOAD C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
-LOAD C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+LOAD C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+LOAD C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
 LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
                 0x20020000                _stack_pointer = (ORIGIN (sram) + LENGTH (sram))
 
 .vectors        0x08000000      0x1c4
  *(.vectors)
- .vectors       0x08000000      0x1c4 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+ .vectors       0x08000000      0x1c4 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
                 0x08000000                ivt
 
-.text           0x080001c4      0x220
+.text           0x080001c4      0x264
  *(.text*)
  .text.gpio_init
-                0x080001c4       0xbc C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+                0x080001c4       0xbc C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
                 0x080001c4                gpio_init
  .text.spi_config
-                0x08000280       0x70 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+                0x08000280       0x70 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
                 0x08000280                spi_config
- .text.spi_display_write
-                0x080002f0       0x38 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
-                0x080002f0                spi_display_write
+ .text.spi_tft_write_command
+                0x080002f0       0x44 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+                0x080002f0                spi_tft_write_command
+ .text.spi_tft_write_data
+                0x08000334       0x44 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+                0x08000334                spi_tft_write_data
  .text.display_write_config
-                0x08000328       0x30 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
-                0x08000328                display_write_config
+                0x08000378       0x24 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+                0x08000378                display_write_config
  .text.startup.main
-                0x08000358       0x10 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
-                0x08000358                main
- .text._reset   0x08000368       0x50 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
-                0x08000368                _reset
- .text.memcpy   0x080003b8       0x1c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                0x080003b8                memcpy
- .text.memset   0x080003d4       0x10 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
-                0x080003d4                memset
+                0x0800039c       0x10 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+                0x0800039c                main
+ .text._reset   0x080003ac       0x50 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
+                0x080003ac                _reset
+ .text.memcpy   0x080003fc       0x1c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x080003fc                memcpy
+ .text.memset   0x08000418       0x10 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x08000418                memset
 
-.glue_7         0x080003e4        0x0
- .glue_7        0x080003e4        0x0 linker stubs
+.glue_7         0x08000428        0x0
+ .glue_7        0x08000428        0x0 linker stubs
 
-.glue_7t        0x080003e4        0x0
- .glue_7t       0x080003e4        0x0 linker stubs
+.glue_7t        0x08000428        0x0
+ .glue_7t       0x08000428        0x0 linker stubs
 
-.vfp11_veneer   0x080003e4        0x0
- .vfp11_veneer  0x080003e4        0x0 linker stubs
+.vfp11_veneer   0x08000428        0x0
+ .vfp11_veneer  0x08000428        0x0 linker stubs
 
-.v4_bx          0x080003e4        0x0
- .v4_bx         0x080003e4        0x0 linker stubs
+.v4_bx          0x08000428        0x0
+ .v4_bx         0x08000428        0x0 linker stubs
 
-.iplt           0x080003e4        0x0
- .iplt          0x080003e4        0x0 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+.iplt           0x08000428        0x0
+ .iplt          0x08000428        0x0 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
 
-.rel.dyn        0x080003e4        0x0
- .rel.iplt      0x080003e4        0x0 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+.rel.dyn        0x08000428        0x0
+ .rel.iplt      0x08000428        0x0 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
 
 .rodata
  *(.rodata*)
 
-.data           0x20000000        0x0 load address 0x080003e4
+.data           0x20000000        0x0 load address 0x08000428
                 0x20000000                _sdata = .
  *(.data)
  *(.data*)
                 0x20000000                _edata = .
-                0x080003e4                _sidata = LOADADDR (.data)
+                0x08000428                _sidata = LOADADDR (.data)
 
-.igot.plt       0x20000000        0x0 load address 0x080003e4
- .igot.plt      0x20000000        0x0 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+.igot.plt       0x20000000        0x0 load address 0x08000428
+ .igot.plt      0x20000000        0x0 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
 
-.bss            0x20000000        0x0 load address 0x080003e4
+.bss            0x20000000        0x0 load address 0x08000428
                 0x20000000                _sbss = .
  *(.bss)
  *(COMMON)
@@ -143,94 +146,91 @@ LOAD c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc
 OUTPUT(firmware.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000      0x603
- .debug_info    0x00000000      0x4e5 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_info    0x000004e5      0x11e C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+.debug_info     0x00000000      0x5d7
+ .debug_info    0x00000000      0x4b9 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_info    0x000004b9      0x11e C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 
-.debug_abbrev   0x00000000      0x26e
- .debug_abbrev  0x00000000      0x193 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_abbrev  0x00000193       0xdb C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+.debug_abbrev   0x00000000      0x243
+ .debug_abbrev  0x00000000      0x168 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_abbrev  0x00000168       0xdb C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 
-.debug_loc      0x00000000       0x53
- .debug_loc     0x00000000       0x53 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
-
-.debug_aranges  0x00000000       0x68
+.debug_aranges  0x00000000       0x70
  .debug_aranges
-                0x00000000       0x48 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+                0x00000000       0x50 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
  .debug_aranges
-                0x00000048       0x20 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+                0x00000050       0x20 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 
-.debug_ranges   0x00000000       0x60
- .debug_ranges  0x00000000       0x50 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_ranges  0x00000050       0x10 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+.debug_ranges   0x00000000       0x50
+ .debug_ranges  0x00000000       0x40 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_ranges  0x00000040       0x10 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 
-.debug_macro    0x00000000     0x1d13
- .debug_macro   0x00000000      0x22b C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000022b      0xa6c C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000c97       0x22 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000cb9       0x4c C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000d05       0x1e C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000d23       0x94 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000db7       0x3c C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000df3       0x34 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000e27       0x16 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000e3d       0x57 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000e94       0x97 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00000f2b      0x341 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000126c       0xfd C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001369       0x10 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001379       0x16 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000138f       0x43 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x000013d2       0x34 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001406       0x10 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001416       0x58 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000146e       0x71 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x000014df       0x1c C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x000014fb      0x12a C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001625       0x10 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001635       0x6a C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000169f       0x1c C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x000016bb       0x52 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000170d       0x22 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000172f       0x10 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x0000173f       0x52 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001791       0xd5 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001866       0x1c C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001882       0x3d C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x000018bf       0x16 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x000018d5      0x145 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001a1a      0x103 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001b1d      0x1df C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_macro   0x00001cfc       0x17 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+.debug_macro    0x00000000     0x1d1f
+ .debug_macro   0x00000000      0x237 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000237      0xa6c C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000ca3       0x22 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000cc5       0x4c C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000d11       0x1e C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000d2f       0x94 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000dc3       0x3c C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000dff       0x34 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000e33       0x16 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000e49       0x57 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000ea0       0x97 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00000f37      0x341 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001278       0xfd C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001375       0x10 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001385       0x16 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x0000139b       0x43 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x000013de       0x34 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001412       0x10 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001422       0x58 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x0000147a       0x71 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x000014eb       0x1c C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001507      0x12a C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001631       0x10 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001641       0x6a C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x000016ab       0x1c C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x000016c7       0x52 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001719       0x22 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x0000173b       0x10 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x0000174b       0x52 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x0000179d       0xd5 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001872       0x1c C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x0000188e       0x3d C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x000018cb       0x16 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x000018e1      0x145 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001a26      0x103 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001b29      0x1df C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_macro   0x00001d08       0x17 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 
-.debug_line     0x00000000      0x661
- .debug_line    0x00000000      0x5f0 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_line    0x000005f0       0x71 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+.debug_line     0x00000000      0x69e
+ .debug_line    0x00000000      0x62d C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_line    0x0000062d       0x71 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 
-.debug_str      0x00000000     0x7e79
- .debug_str     0x00000000     0x7e02 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
-                               0x7ffa (size before relaxing)
- .debug_str     0x00007e02       0x77 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+.debug_str      0x00000000     0x7ec5
+ .debug_str     0x00000000     0x7e4e C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+                               0x8046 (size before relaxing)
+ .debug_str     0x00007e4e       0x77 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
                                0x2d3b (size before relaxing)
 
 .comment        0x00000000       0x49
- .comment       0x00000000       0x49 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+ .comment       0x00000000       0x49 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
                                  0x4a (size before relaxing)
- .comment       0x00000049       0x4a C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+ .comment       0x00000049       0x4a C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
 
 .ARM.attributes
                 0x00000000       0x34
  .ARM.attributes
-                0x00000000       0x34 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
+                0x00000000       0x34 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
  .ARM.attributes
-                0x00000034       0x34 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
+                0x00000034       0x34 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
  .ARM.attributes
                 0x00000068       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
                 0x0000009c       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
 
-.debug_frame    0x00000000       0xf0
- .debug_frame   0x00000000       0x80 C:\Users\gaura\AppData\Local\Temp\cc9Yduyi.o
- .debug_frame   0x00000080       0x28 C:\Users\gaura\AppData\Local\Temp\ccWekfiv.o
- .debug_frame   0x000000a8       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x000000d0       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+.debug_frame    0x00000000      0x104
+ .debug_frame   0x00000000       0x94 C:\Users\gaura\AppData\Local\Temp\ccoetoR3.o
+ .debug_frame   0x00000094       0x28 C:\Users\gaura\AppData\Local\Temp\ccJ8O21D.o
+ .debug_frame   0x000000bc       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000000e4       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)

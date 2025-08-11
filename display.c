@@ -13,8 +13,10 @@
 #define PA6 6 // SPI1_MISO
 #define PA7 7 // SPI1_MOSI
 
+#define SWRESET (uint8_t) (0x01)
 #define ALL_PIXELS_OFF (uint8_t) (0x22)
 #define DISPLAY_OFF (uint8_t) (0x28)
+#define DISPLAY_ON (uint8_t) (0x29)
 #define COLUMN_ADDRESS_SET (uint8_t) (0x2A)
 #define PAGE_ADDRESS_SET (uint8_t) (0x2B)
 #define MEMORY_WRITE (uint8_t) (0x2C)
@@ -81,21 +83,38 @@ void spi_config(void){
 }
 
 
-void spi_display_write(uint8_t buf, unsigned int d_c){
+void spi_tft_write_command(uint8_t buf){
     while(!(SPI->SPI_SR & (1U << 1))){ // wait for transmit buffer to be empty
 
     }
-    if (d_c)
-        GPIO('A')->ODR |= (1U << PA8);  // DC = HIGH = data
-    else
-        GPIO('A')->ODR &= ~(1U << PA8); // DC = LOW = command
+    GPIO('A')->ODR &= ~(1U << PA8); // Pulling DC line LOW
     GPIO('A')->ODR &= ~(1U << PA10); // Pulling CS line LOW, selecting the peripheral
 
     SPI->SPI_DR = buf;
 
+    GPIO('A')->ODR |= (1U << PA8);; // Pulling DC line HIGH
     GPIO('A')->ODR |= (1U << PA10); // Pulling CS line HIGH, setting peripheral in idle state
+
+    /* IT IS NECESSARY TO HAVE 5MS DELAY AFTER RESETTING */
+    GPIO('B')->ODR |= (1U << PA5); // Pulling RESET line HIGH, reseting the display
 }
 
+
+void spi_tft_write_data(uint8_t buf){
+    while(!(SPI->SPI_SR & (1U << 1))){ // wait for transmit buffer to be empty
+
+    }
+    GPIO('A')->ODR |= (1U << PA8);; // Pulling DC line HIGH
+    GPIO('A')->ODR &= ~(1U << PA10); // Pulling CS line LOW, selecting the peripheral
+
+    SPI->SPI_DR = buf;
+
+    GPIO('A')->ODR &= ~(1U << PA8); // Pulling DC line LOW
+    GPIO('A')->ODR |= (1U << PA10); // Pulling CS line HIGH, setting peripheral in idle state
+
+    /* IT IS NECESSARY TO HAVE 5MS DELAY AFTER RESETTING */
+    GPIO('B')->ODR |= (1U << PA5); // Pulling RESET line HIGH, reseting the display
+}
 
 uint32_t spi_read(void){
     while(!(SPI->SPI_SR & (0U << 0))){ // wait for transmit buffer to be empty
@@ -107,17 +126,15 @@ uint32_t spi_read(void){
 
 void display_write_config(void){
     // Setting RGB format to RGB666
-    spi_display_write(INTERFACE_PIXEL_FORMAT, COMMAND); 
-    uint8_t ipf = 0x55U;
-    spi_display_write(ipf, DATA);
+    spi_tft_write_command(INTERFACE_PIXEL_FORMAT); 
+    spi_tft_write_data(0x66U); // RGB555 Format
 
-
+    spi_tft_write_command(DISPLAY_ON); 
     // Writing to memory
-    spi_display_write(MEMORY_WRITE, COMMAND); 
-    for (int i = 0; i < 480 * 320; i++) {
-        spi_display_write(0x00, DATA); // high byte
-        spi_display_write(0x00, DATA); // low byte
-    }
+    spi_tft_write_command(MEMORY_WRITE);
+    spi_tft_write_data(0b00111111U); // high byte
+    
+
     
 
 }

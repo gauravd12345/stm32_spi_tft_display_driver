@@ -92,8 +92,8 @@ int main(void){
     gpio_init();
     spi_config();
     while(1){
-        spi_display_write(0x0U);
-
+        spi_display_write(0x1U);
+        
     }
 
 }
