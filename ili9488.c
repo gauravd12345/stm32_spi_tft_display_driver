@@ -1,17 +1,6 @@
 #include <stdio.h>
 #include "hal.h"
-
-#define GPIO(port) ((struct gpio *) 0x40020000 + (0x04 * (port - 'A')))
-#define RCC ((struct rcc *) 0x40023800)
-#define SPI ((struct spi *) 0x40013000)
-
-#define PA5 5 // SPI1_SCK
-#define PA6 6 // SPI1_MISO
-#define PA7 7 // SPI1_MOSI
-
-#define PA10 10 // Pin D2 on MCU -> CS line
-#define PB5 5 // Pin D4 on MCU -> RESET line
-#define PA8 8 // Pin D7 on MCU -> DC/RS line
+#include "ili9488.h"
 
 void gpio_init(void){
     // Enabling the SPI1, GPIOB, and GPIOA clock 
@@ -44,9 +33,7 @@ void gpio_init(void){
     GPIO('A')->AFR[0] |= (0x5U << (PA5 * 4));
     GPIO('A')->AFR[0] |= (0x5U << (PA6 * 4));
     GPIO('A')->AFR[0] |= (0x5U << (PA7 * 4));
-
 }
-
 
 void spi_config(void){ 
     SPI->SPI_CR1 &= ~(1U << 6); // Setting SPE bit to 0, disabling SPI communcation
@@ -68,32 +55,88 @@ void spi_config(void){
     SPI->SPI_CR1 &= ~(1U << 11); // DFF bit: 8-bit data frame format is selected for transmission/reception
 
     SPI->SPI_CR1 |= (1 << 6); // Setting SPE bit to 1, enabling SPI communcation
+
 }
 
-
-void spi_display_write(uint8_t buf){
-    while(!(SPI->SPI_SR & (1U << 1))){ // wait for transmit buffer to be empty
-
+void delay_us(uint32_t delay){
+    for (volatile uint32_t i = 0; i< delay* 9U; ++i) {
+         __asm volatile("nop"); 
     }
 
+}
+
+void spi_busy(void){
+    while( (SPI->SPI_SR & (1U << 7))){} // wait for BSY buffer to be empty
+    
+}
+
+void spi_tft_write_command(uint8_t buf){
+    GPIO('A')->ODR &= ~(1U << PA8); // Pulling DC line LOW
+    //GPIO('A')->ODR &= ~(1U << PA10); // Pulling CS line LOW, selecting the peripheral
+
+    while(!(SPI->SPI_SR & (1U << 1))){} 
     SPI->SPI_DR = buf;
+    spi_busy();
+
+    //GPIO('A')->ODR |= (1U << PA8);; // Pulling DC line HIGH
+    //GPIO('A')->ODR |= (1U << PA10); // Pulling CS line HIGH, setting peripheral in idle state
 
 }
 
-uint32_t spi_read(void){
-    while(!(SPI->SPI_SR & (0U << 0))){ // wait for transmit buffer to be empty
 
+void spi_tft_write_data(uint8_t buf){
+    //GPIO('A')->ODR &= ~(1U << PA10); // Pulling CS line LOW, selecting the peripheral
+    GPIO('A')->ODR |= (1U << PA8);; // Pulling DC line HIGH
+
+    while(!(SPI->SPI_SR & (1U << 1))){} 
+    SPI->SPI_DR = buf;
+    spi_busy();
+    //GPIO('A')->ODR |= (1U << PA10); // Pulling CS line HIGH, setting peripheral in idle state
+
+}
+
+void tft_hw_reset(void){
+    GPIO('B')->ODR &= ~(1U << PB5); // Pulling RESET line LOW, disabling RESET
+    delay_us(5000);
+    GPIO('B')->ODR |= (1U << PB5); // Pulling RESET line HIGH, reseting the display
+    delay_us(5000);
+    GPIO('A')->ODR &= ~(1U << PA10); // Pulling CS line LOW, selecting the peripheral
+
+}
+
+void ili9488_init(void){
+    tft_hw_reset();
+    spi_tft_write_command(SOFTWARE_RESET); delay_us(5000);
+    spi_tft_write_command(SLEEP_OUT); delay_us(120000);
+
+    spi_tft_write_command(MEMORY_ACCESS_CONTROL); spi_tft_write_data(0x08);
+    // Setting to RGB666 format
+    spi_tft_write_command(INTERFACE_PIXEL_FORMAT); spi_tft_write_data(0x66);
+    
+    spi_tft_write_command(DISPLAY_ON);
+    delay_us(20000);
+    
+}   
+
+void fill_screen(uint8_t r, uint8_t g, uint8_t b){
+    spi_tft_write_command(MEMORY_WRITE);
+    uint32_t display_area = 480 * 320;
+    for(uint32_t i = 0; i < display_area; i++){
+        spi_tft_write_data(r); // r
+        spi_tft_write_data(g); // g
+        spi_tft_write_data(b); // b
+        
     }
-    return SPI->SPI_DR;
+   
 }
-
 
 int main(void){
     gpio_init();
     spi_config();
-    while(1){
-        spi_display_write(0x1U);
-        
-    }
+    ili9488_init();
 
+    fill_screen(0x00, 0x00, 0x00);
+    while(1){
+         
+    }
 }
