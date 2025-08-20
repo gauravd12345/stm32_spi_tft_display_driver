@@ -22,3 +22,4 @@ struct spi {
                       SPI_RXCRCR, SPI_TXCRCR, SPI_I2SCFGR, SPI_I2SPR;
     
 };
+
