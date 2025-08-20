@@ -2,6 +2,8 @@
 #include "hal.h"
 #include "ili9488.h"
 
+
+
 void gpio_init(void){
     // Enabling the SPI1, GPIOB, and GPIOA clock 
     RCC->AHB1ENR |= (1 << 0);
@@ -59,10 +61,10 @@ void spi_config(void){
 }
 
 void delay_us(uint32_t delay){
-    for (volatile uint32_t i = 0; i< delay* 9U; ++i) {
+    for (volatile uint32_t i = 0; i< delay * 9U; ++i) {
          __asm volatile("nop"); 
     }
-
+    
 }
 
 void spi_busy(void){
@@ -96,11 +98,11 @@ void spi_tft_write_data(uint8_t buf){
 }
 
 void tft_hw_reset(void){
-    GPIO('B')->ODR &= ~(1U << PB5); // Pulling RESET line LOW, disabling RESET
+    GPIO('B')->ODR &= ~(1U << PB5); // RESET line LOW
     delay_us(5000);
-    GPIO('B')->ODR |= (1U << PB5); // Pulling RESET line HIGH, reseting the display
+    GPIO('B')->ODR |= (1U << PB5); // RESET line HIGH, reseting the display
     delay_us(5000);
-    GPIO('A')->ODR &= ~(1U << PA10); // Pulling CS line LOW, selecting the peripheral
+    GPIO('A')->ODR &= ~(1U << PA10); // RESET line LOW
 
 }
 
@@ -110,24 +112,74 @@ void ili9488_init(void){
     spi_tft_write_command(SLEEP_OUT); delay_us(120000);
 
     spi_tft_write_command(MEMORY_ACCESS_CONTROL); spi_tft_write_data(0x08);
-    // Setting to RGB666 format
+    
     spi_tft_write_command(INTERFACE_PIXEL_FORMAT); spi_tft_write_data(0x66);
     
-    spi_tft_write_command(DISPLAY_ON);
-    delay_us(20000);
+    spi_tft_write_command(DISPLAY_ON); delay_us(20000);
     
 }   
 
-void fill_screen(uint8_t r, uint8_t g, uint8_t b){
+void set_window_frame(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2){
+    spi_tft_write_command(COLUMN_ADDRESS_SET);
+
+    spi_tft_write_data((uint8_t) (x1 >> 8));
+    spi_tft_write_data((uint8_t) (x1 & 0xFFU));
+    spi_tft_write_data((uint8_t) (x2 >> 8));
+    spi_tft_write_data((uint8_t) (x2 & 0xFFU));
+
+    spi_tft_write_command(PAGE_ADDRESS_SET);
+
+    spi_tft_write_data((uint8_t) (y1 >> 8));
+    spi_tft_write_data((uint8_t) (y1 & 0xFFU));
+    spi_tft_write_data((uint8_t) (y2 >> 8));
+    spi_tft_write_data((uint8_t) (y2 & 0xFFU));
+
+}
+
+
+void fill_screen(rgb color){
     spi_tft_write_command(MEMORY_WRITE);
-    uint32_t display_area = 480 * 320;
-    for(uint32_t i = 0; i < display_area; i++){
-        spi_tft_write_data(r); // r
-        spi_tft_write_data(g); // g
-        spi_tft_write_data(b); // b
+    // Display_area is 320 * 480 pixels
+    for(uint16_t i = 0; i < 320; i++){
+        for(uint16_t j = 0; j < 480; j++){
+            spi_tft_write_data(color.r); // r
+            spi_tft_write_data(color.g); // g
+            spi_tft_write_data(color.b); // b
+        }
         
     }
    
+}
+
+
+void draw_square(uint16_t x, uint16_t y, uint16_t size, rgb color){
+    set_window_frame(x, y, x + size, y + size);
+    spi_tft_write_command(MEMORY_WRITE);
+    for(uint16_t i = 0; i < size; i++){
+        for(uint16_t j = 0; j < size; j++){
+            spi_tft_write_data(color.r); // r
+            spi_tft_write_data(color.g); // g
+            spi_tft_write_data(color.b); // b
+            
+        }
+        
+    }
+    
+}
+
+void draw_rectangle(uint16_t x, uint16_t y, uint16_t length, uint16_t width, rgb color){
+    set_window_frame(x, y, x + length, y + width);
+    spi_tft_write_command(MEMORY_WRITE);
+    for(uint16_t i = 0; i < (length); i++){
+        for(uint16_t j = 0; j < (width); j++){
+            spi_tft_write_data(color.r); // r
+            spi_tft_write_data(color.g); // g
+            spi_tft_write_data(color.b); // b
+            
+        }
+        
+    }
+    
 }
 
 int main(void){
@@ -135,8 +187,10 @@ int main(void){
     spi_config();
     ili9488_init();
 
-    fill_screen(0x00, 0x00, 0x00);
+    fill_screen(BLACK);
+    draw_rectangle(110, 90, 100, 300, GREEN); // 200 * 300 pixels rectangle
     while(1){
          
+
     }
 }

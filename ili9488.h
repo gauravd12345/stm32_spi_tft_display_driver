@@ -24,3 +24,14 @@
 #define MEMORY_ACCESS_CONTROL (uint8_t) (0x36)
 
 
+struct rgb_color{
+    uint8_t r, g, b;
+
+ };
+typedef struct rgb_color rgb;
+
+#define RED (rgb) {0xFF, 0x00, 0x00}
+#define GREEN (rgb) {0x00, 0xFF, 0x00}
+#define BLUE (rgb) {0x00, 0x00, 0xFF}
+#define WHITE (rgb) {0xFF, 0xFF, 0xFF}
+#define BLACK (rgb) {0x00, 0x00, 0x00}

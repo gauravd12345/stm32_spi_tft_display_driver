@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "hal.h": "c"
+        "hal.h": "c",
+        "ili9488.h": "c",
+        "stdio.h": "c"
     }
 }
