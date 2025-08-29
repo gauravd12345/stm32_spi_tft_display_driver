@@ -1,5 +1,5 @@
-# STM32F4xx Display Driver for LCD TFT Display
-This repository contains the implementation for an STM32NucleoF446RE display driver for an ILI9488 Display Module. See the following sections for more information.
+# LCD Display Driver for STM32F4xx
+This repository contains the implementation for an ILI9488 LCD Display Driver for an STM32NucleoF446RE. See the following sections for more information.
 
 ## Display Information
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/1c5272f4-9754-4432-b124-d50ed42d629e" />
@@ -28,25 +28,23 @@ int main(void){
 
 
 
-## Understanding the ILI9488 Display 
+## Understanding the ILI9488 Driver
 Before writing any code, it is extremely important to read through the datasheet to understand how this display works. A link to the datasheet is included in the Resources section and should you encounter any difficulties, referring to the datasheet will be a huge help.
 
 ### Sending data over 4-line SPI
 
-The ILI9488 controller uses the SPI data communication protocol to communicate between the MCU and display module. It accepts multiple configurations such as 3-line SPI, 4-line SPI, 3-line parallel SPI, etc but for the display used in this repository, we will be using 4-line SPI as it is already configured that way(refer to the display information). 
+The ILI9488 driver uses the SPI data communication protocol to communicate between the MCU and display module. It accepts multiple configurations such as 3-line SPI, 4-line SPI, 3-line parallel SPI, etc. but for this particular display, 4-line SPI is the best choice as the display is already configured to accept that format(refer to the display information). SPI is a <i>synchronous</i> protocol similar to I2C, which means that it sends data on rising/falling edges of a clock signal that is shared between the MCU and the device. The general layout of 4-line SPI is like so:
 
-The general layout of SPI is like so:
 1. SCLK -> Clock signal
 2. MOSI -> Master Out Slave In
 3. MISO -> Master In Slave Out
 4. CS -> Chip Select
 
-How it works is that the MCU will send out a synchronized clock signal on SCLK and then pull CS low to select the device you wish to communicate with. Then, data is sent over MOSI from the MCU to the device.
-To better understand, here is an oscilloscope output I generated when developing this driver that shows SCLK and MOSI:
+To use SPI, the MCU will first send out a synchronized clock signal on SCLK and then toggle the device it wishes to communicate with by pulling the CS line to a low voltage level. Additionally, this is how the MCU can uniquely identify which device it should send data to: holding the CS line connected to that device low. Then, data is sent over MOSI from the MCU to the device. Generally, the master will be the MCU and the slave will be whatever device you are sending data to. To better understand, here is an oscilloscope output I generated when developing this driver that shows both SCLK and MOSI lines:
 
 <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/56dd4d00-f29f-451f-858a-e470a237e0e3" />
 
-As you can see, the periodic, yellow signal is SCLK and the blue signal is MOSI.  Since we don't need to read anything from the display, we don't need to use the MISO line. Instead, the 4th wire we will use will be the DC/RS pin. 
+As you can see, the periodic, yellow signal is SCLK and the blue signal, MOSI, shows a sequence of bits that I sent. Since we don't need to read anything from the display, we don't need to use the MISO line. Instead, the 4th wire we will use will be the DC/RS pin which is used to send either a command(0) or a data(1) signal. 
 
 ### Power On/Off Sequence
 
