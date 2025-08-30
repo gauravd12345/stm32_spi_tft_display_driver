@@ -10,6 +10,7 @@
 #define PA6 6 // SPI1_MISO
 #define PA7 7 // SPI1_MOSI
 
+#define PA3 3 // TFT_CS
 
 #define SOFTWARE_RESET (uint8_t) (0x01)
 #define SLEEP_IN (uint8_t) (0x10)
